@@ -115,7 +115,7 @@ module test_spi ();
     cpha = 0;
     write_byte(8'hA5);
     write_byte(8'h3C);
-    wait (empty && !busy);  // Wait for transaction pipeline to flush
+    while (!(empty && !busy)) @(posedge clk);  // Wait for transaction pipeline to flush
     #100;
 
     // Test Mode 1 (CPOL=0, CPHA=1)
@@ -123,7 +123,7 @@ module test_spi ();
     cpha = 1;
     write_byte(8'hFF);
     write_byte(8'h00);
-    wait (empty && !busy);
+    while (!(empty && !busy)) @(posedge clk);
     #100;
 
     // Test Mode 2 (CPOL=1, CPHA=0)
@@ -131,7 +131,7 @@ module test_spi ();
     cpha = 0;
     write_byte(8'h5A);
     write_byte(8'hC3);
-    wait (empty && !busy);
+    while (!(empty && !busy)) @(posedge clk);
     #100;
 
     // Test Mode 3 (CPOL=1, CPHA=1)
@@ -139,7 +139,7 @@ module test_spi ();
     cpha = 1;
     write_byte(8'hAA);
     write_byte(8'h55);
-    wait (empty && !busy);
+    while (!(empty && !busy)) @(posedge clk);
     #100;
 
     // Test Burst / FIFO Full capability
@@ -154,7 +154,7 @@ module test_spi ();
     write_byte(8'h66);
     write_byte(8'h77);
     write_byte(8'h88);
-    wait (empty && !busy);
+    while (!(empty && !busy)) @(posedge clk);
     #100;
 
     if (errors == 0) $display("   [SUCCESS] ALL TESTS PASSED! 0 ERRORS.");

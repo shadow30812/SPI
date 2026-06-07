@@ -35,7 +35,7 @@ module fifo #(
 
   // Sequential Write Logic
   always @(posedge clk or negedge rst_n) begin
-    if (rst_n) wr_ptr <= 0;
+    if (!rst_n) wr_ptr <= 0;
     else if (wr_en && !full) begin
       mem[wr_ptr[ADDR_WIDTH-1:0]] <= wr_data;
       wr_ptr <= wr_ptr + 1;
@@ -44,7 +44,7 @@ module fifo #(
 
   // Sequential Read Logic
   always @(posedge clk or negedge rst_n) begin
-    if (rst_n) begin
+    if (!rst_n) begin
       rd_ptr  <= 0;
       rd_data <= {DATA_WIDTH{1'b0}};
     end else if (rd_en && !empty) begin
