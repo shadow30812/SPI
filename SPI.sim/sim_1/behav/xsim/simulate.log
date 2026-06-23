@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+   Starting SPI Master Verification Suite...
+[PASS] Mode 00 | Successfully looped back: a5
+[PASS] Mode 00 | Successfully looped back: 3c
+INFO: xsimkernel Simulation Memory Usage: 281148 KB (Peak: 338420 KB), Simulation CPU Usage: 1480 ms

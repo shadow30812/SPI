@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../home/shadow30812/Vivado/2025.2/data/rsb/busdef" \
+"../../../../SPI.srcs/sources_1/imports/SPI/src/core.v" \
+"../../../../SPI.srcs/sources_1/imports/SPI/src/fifo.v" \
+"../../../../SPI.srcs/sources_1/imports/SPI/src/top.v" \
+"../../../../SPI.srcs/sources_1/imports/SPI/test_spi.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

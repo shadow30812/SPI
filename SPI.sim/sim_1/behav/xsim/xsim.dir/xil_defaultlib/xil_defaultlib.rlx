@@ -1,0 +1,9 @@
+0.7
+2020.2
+Nov 14 2025
+12:36:23
+/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,,,,,,,
+/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/src/core.v,1781108071,verilog,,/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/src/fifo.v,,core,,,../../../../../../../../../../home/shadow30812/Vivado/2025.2/data/rsb/busdef,,,,,
+/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/src/fifo.v,1781108071,verilog,,/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/src/top.v,,fifo,,,../../../../../../../../../../home/shadow30812/Vivado/2025.2/data/rsb/busdef,,,,,
+/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/src/top.v,1781108071,verilog,,/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/test_spi.v,,top,,,../../../../../../../../../../home/shadow30812/Vivado/2025.2/data/rsb/busdef,,,,,
+/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/test_spi.v,1781108071,verilog,,,,test_spi,,,../../../../../../../../../../home/shadow30812/Vivado/2025.2/data/rsb/busdef,,,,,

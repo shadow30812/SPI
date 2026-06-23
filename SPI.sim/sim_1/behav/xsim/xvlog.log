@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/src/core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module core
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/src/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/SPI/test_spi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_spi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
