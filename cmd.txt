@@ -1,1 +1,1 @@
-cd ~/Codes/verilog/SPI && iverilog -o sim.out src/*.v test_spi.v && vvp sim.out && gtkwave dump_spi.vcd
+cd /media/shadow30812/Windows-SSD/Well/Projects/SPI && iverilog -o sim.out src/*.v test_spi.v && vvp sim.out && gtkwave dump_spi.vcd
