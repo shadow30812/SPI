@@ -1,24 +1,25 @@
 #-----------------------------------------------------------
-# Vivado v2025.2 (64-bit)
-# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
-# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
-# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Jul  2 01:04:57 2026
-# Process ID         : 212581
-# Current directory  : /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.runs/impl_1
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Oct  4 14:04:12 2026
+# Process ID         : 1039144
+# Current directory  : /mnt/Windows/Well/Projects/EE Core/SPI/SPI.runs/impl_1
 # Command line       : vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
-# Log file           : /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.runs/impl_1/top.vdi
-# Journal file       : /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.runs/impl_1/vivado.jou
-# Running On         : Swastik-Yoga-Slim-6-14IRH8
-# Platform           : Ubuntu
-# Operating System   : Ubuntu 24.04.4 LTS
+# Log file           : /mnt/Windows/Well/Projects/EE Core/SPI/SPI.runs/impl_1/top.vdi
+# Journal file       : /mnt/Windows/Well/Projects/EE Core/SPI/SPI.runs/impl_1/vivado.jou
+# Running On         : localhost.localdomain
+# Platform           : rocky
+# Operating System   : Rocky Linux 10.2 (Red Quartz)"
+RELEASE_TYPE="stable
 # Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13500H
-# CPU Frequency      : 2448.913 MHz
+# CPU Frequency      : 1100.157 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 16
-# Host memory        : 14381 MB
-# Swap memory        : 12884 MB
-# Total Virtual      : 27266 MB
-# Available Virtual  : 17383 MB
+# Host memory        : 14107 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 22697 MB
+# Available Virtual  : 9764 MB
 #-----------------------------------------------------------
 source top.tcl -notrace

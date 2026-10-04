@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.runs/impl_1/top.tcl"
+  variable script "/mnt/Windows/Well/Projects/EE Core/SPI/SPI.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,30 +104,30 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
   set_param general.usePosixSpawnForFork 1
-  set_param runs.launchOptions { -jobs 8  }
+  set_param chipscope.maxJobs 4
+  set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7k70tfbv676-1
+  create_project -in_memory -part xc7k325tfbv676-2L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.cache/wt [current_project]
-  set_property parent.project_path /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.xpr [current_project]
-  set_property ip_output_repo /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.cache/ip [current_project]
+  set_property webtalk.parent_dir {/mnt/Windows/Well/Projects/EE Core/SPI/SPI.cache/wt} [current_project]
+  set_property parent.project_path {/mnt/Windows/Well/Projects/EE Core/SPI/SPI.xpr} [current_project]
+  set_property ip_output_repo {{/mnt/Windows/Well/Projects/EE Core/SPI/SPI.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.runs/synth_1/top.dcp
+  add_files -quiet {{/mnt/Windows/Well/Projects/EE Core/SPI/SPI.runs/synth_1/top.dcp}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/constrs_1/new/timing.xdc
+  read_xdc {{/mnt/Windows/Well/Projects/EE Core/SPI/SPI.srcs/constrs_1/new/clk.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top top -part xc7k70tfbv676-1 
+  link_design -top top -part xc7k325tfbv676-2L 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }

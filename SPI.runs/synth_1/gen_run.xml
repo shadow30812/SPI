@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1782934463" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/test_spi.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7k325tfbv676-2L" LaunchTime="1791102822">
   <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top.dcp"/>
@@ -11,7 +11,7 @@
   <File Type="PA-TCL" Name="top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/src/core.v">
+    <File Path="$PSRCDIR/sources_1/imports/SPI/src/core.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/src/core.v"/>
         <Attr Name="ImportTime" Val="1781108071"/>
@@ -20,7 +20,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/fifo.v">
+    <File Path="$PSRCDIR/sources_1/imports/SPI/src/fifo.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/src/fifo.v"/>
         <Attr Name="ImportTime" Val="1781108071"/>
@@ -29,9 +29,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/top.v">
+    <File Path="$PSRCDIR/sources_1/imports/SPI/src/top.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/src/top.v"/>
+        <Attr Name="ImportTime" Val="1781108071"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/SPI/test_spi.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/test_spi.v"/>
         <Attr Name="ImportTime" Val="1781108071"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -41,12 +51,11 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/timing.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/clk.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -58,20 +67,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PSRCDIR/utils_1/imports/synth_1/test_spi.dcp">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedInSteps" Val="synth_1"/>
-        <Attr Name="AutoDcp" Val="1"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2026">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

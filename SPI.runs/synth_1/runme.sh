@@ -4,13 +4,13 @@
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-# Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+# Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/shadow30812/Vivado/2025.2/Vitis/bin:/home/shadow30812/Vivado/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/shadow30812/Vivado/2025.2/Vivado/bin
+  PATH=/home/shadow30812/Vivado/2026.1/Vitis/bin:/home/shadow30812/Vivado/2026.1/Vivado/ids_lite/ISE/bin/lin64:/home/shadow30812/Vivado/2026.1/Vivado/bin
 else
-  PATH=/home/shadow30812/Vivado/2025.2/Vitis/bin:/home/shadow30812/Vivado/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/shadow30812/Vivado/2025.2/Vivado/bin:$PATH
+  PATH=/home/shadow30812/Vivado/2026.1/Vitis/bin:/home/shadow30812/Vivado/2026.1/Vivado/ids_lite/ISE/bin/lin64:/home/shadow30812/Vivado/2026.1/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.runs/synth_1'
+HD_PWD='/mnt/Windows/Well/Projects/EE Core/SPI/SPI.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

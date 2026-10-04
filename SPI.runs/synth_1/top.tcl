@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.runs/synth_1/top.tcl"
+  variable script "/mnt/Windows/Well/Projects/EE Core/SPI/SPI.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,26 +56,26 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7k70tfbv676-1
+create_project -in_memory -part xc7k325tfbv676-2L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.cache/wt [current_project]
-set_property parent.project_path /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.xpr [current_project]
+set_property webtalk.parent_dir {/mnt/Windows/Well/Projects/EE Core/SPI/SPI.cache/wt} [current_project]
+set_property parent.project_path {/mnt/Windows/Well/Projects/EE Core/SPI/SPI.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.cache/ip [current_project]
+set_property ip_output_repo {/mnt/Windows/Well/Projects/EE Core/SPI/SPI.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/src/core.v
-  /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/src/fifo.v
-  /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/sources_1/imports/src/top.v
+  {/mnt/Windows/Well/Projects/EE Core/SPI/SPI.srcs/sources_1/imports/SPI/src/core.v}
+  {/mnt/Windows/Well/Projects/EE Core/SPI/SPI.srcs/sources_1/imports/SPI/src/fifo.v}
+  {/mnt/Windows/Well/Projects/EE Core/SPI/SPI.srcs/sources_1/imports/SPI/src/top.v}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -86,16 +86,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/constrs_1/new/timing.xdc
-set_property used_in_implementation false [get_files /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/constrs_1/new/timing.xdc]
+read_xdc {{/mnt/Windows/Well/Projects/EE Core/SPI/SPI.srcs/constrs_1/new/clk.xdc}}
+set_property used_in_implementation false [get_files {{/mnt/Windows/Well/Projects/EE Core/SPI/SPI.srcs/constrs_1/new/clk.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental /media/shadow30812/Windows-SSD/Well/Projects/SPI/SPI.srcs/utils_1/imports/synth_1/test_spi.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top top -part xc7k70tfbv676-1
+synth_design -top top -part xc7k325tfbv676-2L
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

@@ -1,9 +1,9 @@
 -------------------------------------
-| Tool Version : Vivado v.2025.2
-| Date         : Thu Jul  2 01:05:07 2026
-| Host         : Swastik-Yoga-Slim-6-14IRH8
+| Tool Version : Vivado v.2026.1
+| Date         : Sun Oct  4 14:04:24 2026
+| Host         : localhost.localdomain
 | Design       : design_1
-| Device       : xc7k70t-fbv676-1--
+| Device       : xc7k325t-fbv676-2L-E-
 -------------------------------------
 
 For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
